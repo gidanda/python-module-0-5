@@ -1,0 +1,32 @@
+class Plant:
+    def show(self):
+        print(f"{self.name}: {round(self.height, 1)}cm, {self.days} days old")
+
+    def grow(self):
+        self.height += self.growth_rate
+
+    def age(self):
+        self.days += 1
+
+def main():
+    print("=== Garden Plant Growth ===")
+
+    rose = Plant()
+    rose.name = "Rose"
+    rose.height = 25.0
+    rose.days = 30
+    rose.growth_rate = 0.8
+    start_height = rose.height
+
+    for i in range(1, 8):
+        print(f"=== Day {i} ===")
+        rose.age()
+        rose.grow()
+        rose.show()
+
+    week_total_growth = rose.height - start_height
+    print(f"Growth this week: {round(week_total_growth, 1)}cm")
+
+if __name__ == "__main__":
+        main()
+    

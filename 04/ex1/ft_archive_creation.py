@@ -8,7 +8,7 @@ def main():
 
     filename = sys.argv[1]
     
-    print("=== Cyber Archives Recovery ===")
+    print("=== Cyber Archives Recovery & Preservation ===")
     print(f"Accessing file '{filename}'")
 
     try:
